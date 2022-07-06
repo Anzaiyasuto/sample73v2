@@ -1,0 +1,51 @@
+PODS:
+  - Direction (1.4.0):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils (4.1.0):
+    - Google-Maps-iOS-Utils/Clustering (= 4.1.0)
+    - Google-Maps-iOS-Utils/Geometry (= 4.1.0)
+    - Google-Maps-iOS-Utils/GeometryUtils (= 4.1.0)
+    - Google-Maps-iOS-Utils/Heatmap (= 4.1.0)
+    - Google-Maps-iOS-Utils/QuadTree (= 4.1.0)
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Clustering (4.1.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Geometry (4.1.0):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/GeometryUtils (4.1.0):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Heatmap (4.1.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/QuadTree (4.1.0):
+    - GoogleMaps
+  - GoogleMaps (7.0.0):
+    - GoogleMaps/Maps (= 7.0.0)
+  - GoogleMaps/Base (7.0.0)
+  - GoogleMaps/Maps (7.0.0):
+    - GoogleMaps/Base
+  - GooglePlaces (7.0.0)
+
+DEPENDENCIES:
+  - Direction
+  - Google-Maps-iOS-Utils
+  - GoogleMaps
+  - GooglePlaces
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Direction
+    - Google-Maps-iOS-Utils
+    - GoogleMaps
+    - GooglePlaces
+
+SPEC CHECKSUMS:
+  Direction: 6a63afc0ef62e8164b900c6db91b5a82691bfbe8
+  Google-Maps-iOS-Utils: 3343332b18dfd5be8f1f44edd7d481ace3da4d9a
+  GoogleMaps: 6e9c923ca035989709fcb5771544fda4cc5fa2a4
+  GooglePlaces: 8dba710bed6160a2e4b85e84aaafdbcc0b4010d8
+
+PODFILE CHECKSUM: 9ea4b7fb3c453a941bb0cebc1aa272c087c678a4
+
+COCOAPODS: 1.11.3
