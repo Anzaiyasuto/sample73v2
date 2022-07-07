@@ -8,19 +8,87 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import UserNotifications
+import NotificationCenter
+import CoreLocation
 
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyAHqB7OlRuY2tCOsZ9o8SvJBCFD1sr1hL0")
         // Override point for customization after application launch.
         GMSPlacesClient.provideAPIKey("AIzaSyAHqB7OlRuY2tCOsZ9o8SvJBCFD1sr1hL0")
+        
+        //77
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) {(granted, error) in if granted{print("通過許可")}
+            
+        }
+        
+        //UNTimeIntervalNotificationTrigger
+        /*
+        let content = UNMutableNotificationContent()
+        content.title = "TimeInterval";
+        content.body = "swift-saralymanからの通知だよ";
+        content.sound = UNNotificationSound.default
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5, repeats: false)//５秒後
+        let request = UNNotificationRequest.init(identifier: "TestNotification", content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
+        center.add(request)
+        center.delegate = self
+        
         return true
+        */
+        //UNLocationNotificationTrigger
+        
+        let content = UNMutableNotificationContent()
+        content.title = "apple tourimasu"
+        content.body = "sitei hanni wo tuuka"
+        content.sound = UNNotificationSound.default
+        let coordinate = CLLocationCoordinate2DMake(37.33438, -122.04150)
+        let region = CLCircularRegion(center: coordinate, radius: 100.0, identifier: "test")
+        region.notifyOnEntry = true
+        region.notifyOnExit = true
+        let trigger1 = UNLocationNotificationTrigger(region: region, repeats: true)
+        let request = UNNotificationRequest.init(identifier: "TestNotification", content: content, trigger: trigger1)
+        let center = UNUserNotificationCenter.current()
+        center.add(request)
+        center.delegate = self
+        
+        return true
+        
     }
+    
+    
+    //77追記
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert,.sound])
+    }
+    
+    //ポップアップ押した後に呼ばれる関数(↑の関数が呼ばれた後に呼ばれる)
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        //Alertダイアログでテスト表示
+        let contentBody = response.notification.request.content.body
+        let alert:UIAlertController = UIAlertController(title: "受け取りました", message: contentBody, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+            (action:UIAlertAction!) -> Void in
+            print("Alert押されました")
+        }))
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+        
+        completionHandler()
+    }
+    //ここまでです
+    
 
     // MARK: UISceneSession Lifecycle
 

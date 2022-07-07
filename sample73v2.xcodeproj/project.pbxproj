@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AB3B5C0E2871654600E77CF9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AB3B5C0D2871654600E77CF9 /* Podfile */; };
+		ABEF477D28761F5A00CFA71C /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABEF477C28761F5A00CFA71C /* InfoView.xib */; };
+		ABEF477F28761FC600CFA71C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEF477E28761FC600CFA71C /* InfoViewController.swift */; };
 		ABFECB422871631C00E45898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFECB412871631C00E45898 /* AppDelegate.swift */; };
 		ABFECB442871631C00E45898 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFECB432871631C00E45898 /* SceneDelegate.swift */; };
 		ABFECB462871631C00E45898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFECB452871631C00E45898 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		386E63CF58C505D0C00204C6 /* Pods-sample73v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sample73v2.debug.xcconfig"; path = "Target Support Files/Pods-sample73v2/Pods-sample73v2.debug.xcconfig"; sourceTree = "<group>"; };
 		AB3B5C0D2871654600E77CF9 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ABEF477C28761F5A00CFA71C /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
+		ABEF477E28761FC600CFA71C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		ABFECB3E2871631C00E45898 /* sample73v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample73v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFECB412871631C00E45898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFECB432871631C00E45898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				ABFECB4A2871632300E45898 /* Assets.xcassets */,
 				ABFECB4C2871632300E45898 /* LaunchScreen.storyboard */,
 				ABFECB4F2871632300E45898 /* Info.plist */,
+				ABEF477C28761F5A00CFA71C /* InfoView.xib */,
+				ABEF477E28761FC600CFA71C /* InfoViewController.swift */,
 			);
 			path = sample73v2;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 			files = (
 				ABFECB4E2871632300E45898 /* LaunchScreen.storyboard in Resources */,
 				ABFECB4B2871632300E45898 /* Assets.xcassets in Resources */,
+				ABEF477D28761F5A00CFA71C /* InfoView.xib in Resources */,
 				ABFECB492871631C00E45898 /* Main.storyboard in Resources */,
 				AB3B5C0E2871654600E77CF9 /* Podfile in Resources */,
 			);
@@ -332,6 +339,7 @@
 			files = (
 				ABFECB462871631C00E45898 /* ViewController.swift in Sources */,
 				ABFECB422871631C00E45898 /* AppDelegate.swift in Sources */,
+				ABEF477F28761FC600CFA71C /* InfoViewController.swift in Sources */,
 				ABFECB442871631C00E45898 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RM2DGPKX58;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sample73v2/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -540,6 +549,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RM2DGPKX58;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sample73v2/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
